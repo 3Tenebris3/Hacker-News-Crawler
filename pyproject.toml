@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hn-crawler"
+version = "0.1.0"
+description = "Recruitment coding exercise – Hacker News crawler"
+authors = ["Andrés Núñez <you@email.com>"]
+packages = [{ include = "hn_crawler", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.110"
+httpx = "^0.27"
+beautifulsoup4 = "^4.12"
+jinja2 = "^3.1"
+uvicorn = {version = "^0.34.2", extras = ["standard"]}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1"
+pytest-mock = "^3.12"
+requests-mock = "^1.12"
+ruff = "^0.4"
+
+[tool.ruff]
+line-length = 100

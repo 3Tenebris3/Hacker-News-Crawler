@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HN Crawler</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+    th { background: #f4f4f4; }
+    select { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Hacker News - Top 30</h1>
+        <p style="font-size:0.9rem;color:#666;">
+            {{ author }} - {{ role }} • <a href="mailto:{{ email }}">{{ email }}</a>
+        </p>
+    </header>
+
+    <form method="get">
+        <label>
+        Filter:
+        <select name="filter" onchange="this.form.submit()">
+            <option value=""         {{ ''      == current and 'selected' or '' }}>all</option>
+            <option value="long"     {{ 'long'  == current and 'selected' or '' }}>> 5 words (comments)</option>
+            <option value="short"    {{ 'short' == current and 'selected' or '' }}><= 5 words (points)</option>
+        </select>
+        </label>
+    </form>
+
+    {% if entries %}
+    <table>
+        <thead>
+        <tr>
+            <th>#</th><th>Title</th><th>Points</th><th>Comments</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for e in entries %}
+        <tr>
+            <td>{{ e.rank }}</td>
+            <td><a href="https://news.ycombinator.com/item?id={{ e.rank }}" target="_blank">{{ e.title }}</a></td>
+            <td>{{ e.points }}</td>
+            <td>{{ e.comments }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No data.</p>
+    {% endif %}
+</body>
+</html>
