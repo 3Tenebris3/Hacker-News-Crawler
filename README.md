@@ -1,27 +1,33 @@
 # Hacker-News Crawler 
 
-Small weekend project built as part of a coding exercise for Stack Builders.  
+Coding exercise for Stack Builders.  
 It scrapes the first 30 posts on [news.ycombinator.com](https://news.ycombinator.com) and lets you explore them through a tiny FastAPI web app.
 
 <p align="center">
-  <img src="docs/screenshot.png" width="720" alt="UI screenshot"/>
+  <img src="docs/ui-preview.png" width="720" alt="UI screenshot"/>
 </p>
 
 ---
 
-## Table of contents
-1. [Why & what](#why--what)
-2. [Quick start](#quick-start)
-3. [Features](#features)
-4. [Project layout](#project-layout)
-5. [Architecture notes](#architecture-notes)
-6. [Running tests](#running-tests)
-7. [Docker](#docker)
-8. [Performance](#performance)
-9. [Future work](#future-work)
-10. [Author](#author)
-11. [License](#license)
+![CI](https://github.com/3Tenebris3/Hacker-News-Crawler/actions/workflows/ci.yml/badge.svg)
 
+
+## Table of contents
+- [Hacker-News Crawler](#hacker-news-crawler)
+  - [Table of contents](#table-of-contents)
+  - [Why \& what](#why--what)
+  - [Quick start](#quick-start)
+    - [Local (Poetry)](#local-poetry)
+    - [Makefile shortcuts](#makefile-shortcuts)
+    - [Docker](#docker)
+  - [Features](#features)
+  - [Project layout](#project-layout)
+  - [Architecture notes](#architecture-notes)
+  - [Running tests](#running-tests)
+  - [Docker](#docker-1)
+  - [Performance](#performance)
+  - [Future work](#future-work)
+  - [Author](#author)
 ---
 
 ## Why & what
@@ -166,4 +172,4 @@ Multi-stage build, final image ~70 MB.
 ## Author
 
 **Andrés Núñez** — Full-stack Developer  
-andres.nunez@example.com · Quito, EC
+andres.nunez@hotmail.com · Quito, EC
