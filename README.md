@@ -1,4 +1,3 @@
-```markdown
 # Hacker-News Crawler 
 
 Small weekend project built as part of a coding exercise for Stack Builders.  
@@ -44,8 +43,6 @@ The app performs two custom filters required by the exercise:
 
 “Words” are tokens separated by spaces; punctuation such as dashes is ignored  
 → `This is – a self-explained example` counts as **5 words**.
-
----
 
 ## Quick start
 
